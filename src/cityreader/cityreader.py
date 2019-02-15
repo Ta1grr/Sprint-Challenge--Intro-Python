@@ -3,9 +3,10 @@ import csv
 # fields for name, latitude, and longitude.
 class City():
    def __init__(self, name, latitude, longitude):
-       self.name = name
-       self.latitude = latitude
-       self.longitude = longitude
+       self.name = str(name)
+       self.lat = float(latitude)
+       self.lon = float(longitude)
+
 
 # We have a collection of US cities with population over 750,000 stored in the
 # file "cities.csv". (CSV stands for "comma-separated values".)
@@ -32,7 +33,7 @@ def cityreader(cities=[]):
             if line_count == 0:
                 line_count += 1
             else:
-                cities.append(City({row[0]},{row[3]},{row[4]}))
+                cities.append(City(row[0],row[3],row[4]))
                 line_count += 1
 
     return cities
@@ -41,7 +42,7 @@ cityreader(cities)
 
 # Print the list of cities (name, lat, lon), 1 record per line.
 for c in cities:
-    print("City Name:", c.name, "Latitude:", c.latitude, "Longitude:", c.longitude)
+    print(c.name, c.lat, c.lon)
 
 # STRETCH GOAL!
 #
