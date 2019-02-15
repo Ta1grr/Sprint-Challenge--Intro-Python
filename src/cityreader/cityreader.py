@@ -41,7 +41,7 @@ cityreader(cities)
 
 # Print the list of cities (name, lat, lon), 1 record per line.
 for c in cities:
-    print(c.name, c.latitude, c.longitude)
+    print("City Name:", c.name, "Latitude:", c.latitude, "Longitude:", c.longitude)
 
 # STRETCH GOAL!
 #
