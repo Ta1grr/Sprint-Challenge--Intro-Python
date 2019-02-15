@@ -18,37 +18,31 @@
 #
 # Put a comment noting which class is the base class
 
-"""" Parent(Base) Class """
-class Vehicle():
-    def __init__(self, name):
-        self.name = name
+#Parent(Base) Class
+class Vehicle:
+    pass
 
-""" Child Branch -- Vehicle >> GroundVehicle """
+#Child Branch -- Vehicle >> GroundVehicle
 class GroundVehicle(Vehicle):
-    def __init__(self, name):
+    def __init__(self):
         super().__init__()
-    
-""" Grandchild Branch -- Vehicle >> GroundVehicle >> Car """        
+#Grandchild Branch -- Vehicle >> GroundVehicle >> Car     
 class Car(GroundVehicle):
-    def __init__(self, name):
+    def __init__(self):
         super().__init__()
-
-""" Grandchild Branch -- Vehicle >> GroundVehicle >> Motorcycle """
+#Grandchild Branch -- Vehicle >> GroundVehicle >> Motorcycle
 class Motorcycle(GroundVehicle):
-    def __init__(self, name):
+    def __init__(self):
         super().__init__()
-
-""" Child Branch -- Vehicle >> FlightVehicle """
+#Child Branch -- Vehicle >> FlightVehicle
 class FlightVehicle(Vehicle):
-    def __init__(self, name):
+    def __init__(self):
         super().__init__()
-
-""" Groundchild Branch -- Vehicle >> FlightVehicle >> Starship """
+#Groundchild Branch -- Vehicle >> FlightVehicle >> Starship
 class Starship(FlightVehicle):
-    def __init__(self, name):
+    def __init__(self):
         super().__init__()
-
-""" Groundchild Branch -- Vehicle >> FlightVehicle >> Airplane """
+#Groundchild Branch -- Vehicle >> FlightVehicle >> Airplane
 class Airplane(FlightVehicle):
-    def __init__(self, name):
+    def __init__(self):
         super().__init__()
